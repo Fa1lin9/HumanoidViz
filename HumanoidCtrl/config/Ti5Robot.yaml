@@ -1,0 +1,25 @@
+HumanoidCtrl:
+  ros__parameters:
+    JointNum: 21
+    JointNames:
+      - UP_DOWN
+      - WAIST_R
+      - WAIST_Y
+      - WAIST_P
+      - R1_SHOULDER_P
+      - R2_SHOULDER_R
+      - R3_SHOULDER_Y
+      - R4_ELBOW_Y
+      - R5_WRIST_P
+      - R6_WRIST_Y
+      - R7_WRIST_R
+      - L1_SHOULDER_P
+      - L2_SHOULDER_R
+      - L3_SHOULDER_Y
+      - L4_ELBOW_Y
+      - L5_WRIST_P
+      - L6_WRIST_Y
+      - L7_WRIST_R
+      - NECK_Y
+      - NECK_P
+      - NECK_R

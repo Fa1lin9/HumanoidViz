@@ -1,0 +1,8 @@
+HumanoidCtrl:
+  ros__parameters:
+    InputTopicName: "/HumanoidCtrl/humanoid_msgs/msg/JointState"
+    # OutputTopicName: "/HumanoidCtrl/JointState"
+    OutputTopicName: "/HumanoidCtrl/JointState"
+    PublishRate: 25.0
+    RobotType: "Ti5Robot"
+    

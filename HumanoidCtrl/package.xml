@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>HumanoidCtrl</name>
+  <version>0.0.0</version>
+  <description>TODO: Package description</description>
+  <maintainer email="8867494@qq.com">Fa1lin9</maintainer>
+  <license>TODO: License declaration</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <depend>rclcpp</depend>
+  <depend>humanoid_msgs</depend>
+  <depend>ros2launch</depend>
+  <depend>xacro</depend>
+  <depend>robot_state_publisher</depend>
+  <depend>robot_state_broadcaster</depend>
+
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>
