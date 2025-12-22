@@ -26,10 +26,11 @@ private:
 
     // Parameter
     std::string inputTopicName;
-    std::string outputTopicName;
+    std::string jointTopic;
+    std::string robotType;
     double publishRate;
-    std::string robotModelPath;
-    urdf::Model robotModel;
+    // std::string robotModelPath;
+    // urdf::Model robotModel;
     std::vector<std::string> jointNames;
     int jointNum;
 

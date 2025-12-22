@@ -7,23 +7,25 @@ HumanoidCtrl::HumanoidCtrl(const rclcpp::NodeOptions& options)
 {
     // Declare Parameters
     this->declare_parameter<std::string>("InputTopicName", "/HumanoidCtrl/JointStateWithoutStamp");
-    this->declare_parameter<std::string>("OutputTopicName", "/HumanoidCtrl/JointState");
+    this->declare_parameter<std::string>("JointTopic", "/HumanoidCtrl/JointState");
     this->declare_parameter<double>("PublishRate", 25.0);
     this->declare_parameter<std::vector<std::string>>("JointNames", std::vector<std::string>());
     this->declare_parameter<int>("JointNum", 0);
+    this->declare_parameter<std::string>("RobotType", "Ti5Robot");
     // this->declare_parameter<std::string>("RobotModelPath", "/HumanoidCtrl/RobotModelPath");
 
     // Read Parameters
     this->inputTopicName = this->get_parameter("InputTopicName").as_string();
-    this->outputTopicName = this->get_parameter("OutputTopicName").as_string();
+    this->jointTopic = this->get_parameter("JointTopic").as_string();
     this->publishRate = this->get_parameter("PublishRate").as_double();
     this->jointNames = this->get_parameter("JointNames").as_string_array();
     this->jointNum = this->get_parameter("JointNum").as_int();
+    this->robotType = this->get_parameter("RobotType").as_string();
     // this->robotModelPath = this->get_parameter("RobotModelPath").as_string();
 
     // Check Parameter
     // Check TopicName
-    if (this->inputTopicName.empty() || this->outputTopicName.empty()) {
+    if (this->inputTopicName.empty() || this->jointTopic.empty()) {
         RCLCPP_ERROR(this->get_logger(), "[HumanoidCtrl] The TopicName cannot be empty! ");
     }
 
@@ -62,7 +64,7 @@ HumanoidCtrl::HumanoidCtrl(const rclcpp::NodeOptions& options)
     // Publisher
     this->outputTopicPub = 
         this->create_publisher<sensor_msgs::msg::JointState>(
-            this->outputTopicName, 10
+            "/" + this->robotType + this->jointTopic, 10
         );
 
     // Subscriber
@@ -85,7 +87,7 @@ HumanoidCtrl::HumanoidCtrl(const rclcpp::NodeOptions& options)
     RCLCPP_INFO(
         get_logger(), 
         "[HumanoidCtrl] HumanoidCtrl started, Publishing to [%s] at %.1f Hz! ",
-        this->inputTopicName.c_str(),
+        this->jointTopic.c_str(),
         this->publishRate
     );
 }

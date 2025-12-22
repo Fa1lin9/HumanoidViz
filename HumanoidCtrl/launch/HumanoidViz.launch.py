@@ -20,26 +20,29 @@ def generate_launch_description():
             basic_config_params = yaml.safe_load(f)
             params = basic_config_params[package_name]['ros__parameters']
             robot_type = params.get('RobotType', 'Ti5Robot')
-            joint_topic = params.get('OutputTopicName', '/joint_states')
+            joint_topic = params.get('JointTopic', '/joint_states')
     except Exception as e:
-        print(f"Error loading basic config: {e}")
-        robot_type = 'Ti5Robot'
-        joint_topic = '/joint_states'
+        raise RuntimeError(f"Failed to load basic config '{basic_config}': {e}")
     
     robot_config = os.path.join(HumanoidCtrl_dir, 'config', robot_type + '.yaml')
+    joint_topic = f"/{robot_type}{joint_topic}"
 
     # RViz Part
     description_package = robot_type + "Description"
     description_urdf = robot_type + ".urdf"
-    description_xacro = robot_type + ".urdf.xacro"
     description_rviz = robot_type + ".rviz"
+
+    # 检查 package 是否存在
+    try:
+        description_path = get_package_share_directory(description_package)
+    except Exception as e:
+        raise RuntimeError(f"Cannot find package '{description_package}': {e}")
 
     robot_description_content = Command(
         [
             PathJoinSubstitution([FindExecutable(name="xacro")]),
             " ",
             PathJoinSubstitution(
-                # [FindPackageShare(description_package), "config", description_xacro]
                 [FindPackageShare(description_package), "urdf", description_urdf]
             )
         ]
