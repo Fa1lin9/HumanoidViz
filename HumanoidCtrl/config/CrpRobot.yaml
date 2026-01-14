@@ -1,0 +1,24 @@
+HumanoidCtrl:
+  ros__parameters:
+    JointNum: 20
+    JointNames:
+      - JT_ankle_pitch
+      - JT_knee_pitch
+      - JT_waist_pitch
+      - JT_waist_yaw
+      - JT_head_yaw
+      - JT_head_pitch
+      - JT_leftshd_pitch
+      - JT_leftshd_roll
+      - JT_leftshd_yaw
+      - JT_leftelbow_pitch
+      - JT_leftwrist_yaw
+      - JT_leftwrist_pitch
+      - JT_leftwrist_roll
+      - JT_rightshd_pitch
+      - JT_rightshd_roll
+      - JT_rightshd_yaw
+      - JT_rightelbow_pitch
+      - JT_rightwrist_yaw
+      - JT_rightwrist_pitch
+      - JT_rightwrist_roll

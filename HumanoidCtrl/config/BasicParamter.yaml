@@ -4,6 +4,8 @@ HumanoidCtrl:
     JointTopic: "/JointState"
     PublishRate: 25.0
     # RobotType: "Ti5Robot"
+    RobotType: "CrpRobot"
+    # RobotType: "UnitreeG1Dof29"
     # RobotType: "UnitreeG1Dof23"
-    RobotType: "UnitreeG1Dof29"
+    
     

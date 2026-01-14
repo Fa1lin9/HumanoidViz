@@ -56,7 +56,8 @@ def generate_launch_description():
         executable='robot_state_publisher',
         output='screen',
         parameters=[robot_description],
-        remappings=[('/joint_states', joint_topic)]
+        remappings=[('/joint_states', joint_topic),
+                    ('/robot_description', '/HumanoidViz/robot_description')] 
     )
 
     rviz_config_file = PathJoinSubstitution([

@@ -59,7 +59,7 @@ Visualization Manager:
         Durability Policy: Volatile
         History Policy: Keep Last
         Reliability Policy: Reliable
-        Value: /robot_description
+        Value: /HumanoidViz/robot_description
       Enabled: true
       Links:
         All Links Enabled: true
@@ -297,10 +297,10 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.3053979277610779
+      Pitch: 0.14539793133735657
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 5.903571605682373
+      Yaw: 5.748570442199707
     Saved: ~
 Window Geometry:
   Displays:
