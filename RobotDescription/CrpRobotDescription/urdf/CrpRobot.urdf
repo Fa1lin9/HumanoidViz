@@ -1231,6 +1231,25 @@
     type="revolute">
     <origin
       xyz="0 0 0"
+      rpy="3.1415926 0 0" />
+    <parent
+      link="right_wrist_Link" />
+    <child
+      link="right_hand_Link" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-1.0467"
+      upper="1.0467"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <!-- Origin version corespond to NoHand Model -->
+  <!-- <joint
+    name="JT_rightwrist_roll"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
       rpy="0 0 0" />
     <parent
       link="right_wrist_Link" />
@@ -1243,5 +1262,5 @@
       upper="1.0467"
       effort="0"
       velocity="0" />
-  </joint>
+  </joint> -->
 </robot>
