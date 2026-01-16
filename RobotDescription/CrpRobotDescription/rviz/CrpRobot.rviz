@@ -58,15 +58,15 @@ Visualization Manager:
         Durability Policy: Volatile
         History Policy: Keep Last
         Reliability Policy: Reliable
-        Value: /robot_description
+        Value: /HumanoidViz/robot_description
       Enabled: true
       Links:
         AMR_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-        All Links Enabled:
-          {}
+          Value: true
+        All Links Enabled: true
         Expand Joint Details: false
         Expand Link Details: false
         Expand Tree: false
@@ -75,82 +75,102 @@ Visualization Manager:
           Alpha: 1
           Show Axes: false
           Show Trail: false
+          Value: true
         calf_Link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
+          Value: true
         head_Link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
+          Value: true
         left_elbow_Link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
+          Value: true
         left_fa_Link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
+          Value: true
         left_forearm_Link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
+          Value: true
         left_hand_Link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
+          Value: true
         left_uperarm_Link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
+          Value: true
         left_wrist_Link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
+          Value: true
         leftshd_Link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
+          Value: true
         neck_Link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
+          Value: true
         right_armend_Link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
+          Value: true
         right_elbow_Link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
+          Value: true
         right_forearm_Link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
+          Value: true
         right_hand_Link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
+          Value: true
         right_shd_Link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
+          Value: true
         right_uperarm_Link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
+          Value: true
         right_wrist_Link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
+          Value: true
         thigh_Link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
+          Value: true
         waist_Link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
+          Value: true
       Mass Properties:
         Inertia: false
         Mass: false
@@ -205,25 +225,25 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz_default_plugins/Orbit
-      Distance: 10
+      Distance: 3.1650052070617676
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 0
-        Y: 0
-        Z: 0
+        X: -0.4537324011325836
+        Y: -0.019773278385400772
+        Z: 0.6870450377464294
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.785398006439209
+      Pitch: 0.39539775252342224
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 0.785398006439209
+      Yaw: 6.243586540222168
     Saved: ~
 Window Geometry:
   Displays:
